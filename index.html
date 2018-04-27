@@ -68,10 +68,9 @@
                         </svg>
                     </div>
                     <div class="mr-4">
-                        <button class="font-semibold text-blue-light hover:text-blue whitespace-no-wrap mx-auto">
+                        <a href="#contact" class="font-semibold text-blue-light hover:text-blue whitespace-no-wrap mx-auto border-solid border-b-4 border-blue no-underline">
                             GET IN TOUCH
-                        </button>
-                        <div class="mx-auto md:max-w-sm border-solid border-t-4 border-blue  opacity-25 "></div>
+                        </a>
                     </div>
                 </nav>
 
@@ -357,14 +356,14 @@
         </div>
     </section>
     <!--./Services-->
-    <!--SayHello-->
-    <section class="bg-white p-8 max-w-xl mx-auto">
-        <div class="max-w-xl mx-auto rounded mb-8">
-            <div class="flex md:items-center flex-col md:flex-row md:justify-between">
-                <div class="mb-8 md:mb-0">
+
+    <section id="contact" class="bg-blue-lighter p-8">
+        <div class="container mx-auto">
+            <div class="lg:flex lg:justify-between">
+                <div class="mb-8">
                     <h3 class="text-4xl font-normal font-thin leading-none mb-3">Interested in working together?</h3>
                     <h4 class="text-2xl text-blue-dark font-normal leading-tight">Ask us a question, tell us a story, challenge us!
-                        <br> We're open for collaboration, just...</h4>
+                    <br> We're open for collaboration, just...</h4>
 
                     <div class="mt-8">
                         <button class="text-4xl border-b-8 border-blue-lightest hover:border-blue-lighter leading-none text-orange font-bold whitespace-no-wrap">
@@ -372,14 +371,50 @@
                         </button>
                     </div>
                 </div>
-                <div class="flex mx-auto">
-                    <img src="img/icons/icons8-hand_with_pen.png">
-                </div>
+
+                <form class="w-full max-w-md" name="contact" method="POST" netlify>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">
+                                Your Name
+                            </label>
+                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker rounded py-3 px-4 mb-3" 
+                                name="name" id="name" type="text" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+                                name="email" id="email" type="email" placeholder="janedoe@gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="organisaion">
+                                Organisation Name
+                            </label>
+                            <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+                                name="organisaion" id="organisaion" type="text" placeholder="Nudjed">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-2">
+                        <div class="w-full px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="comments">
+                                Do you have a specific question or project you'd like to discuss?
+                            </label>
+                            <textarea rows="6" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+                                name="comments" id="comments" type="text" placeholder="Comments..." required></textarea>
+                        </div>
+                    </div>
+                    <div class="flex justify-end mb-2">
+                        <button class="text-4xl border-b-8 border-blue-lightest hover:border-blue-lighter leading-none text-orange font-bold whitespace-no-wrap" type="submit">Send</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
-    <!--./SayHello-->
-    
+
     <footer class="bg-blue-lightest py-8 border-t-8 border-blue-lighter">
         <div class="container mx-auto">
             <div class="flex flex-col-reverse md:flex-row md:items-center md:justify-between px-8">
